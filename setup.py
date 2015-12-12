@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='wmf',
     packages=find_packages(),
-    version='0.1.1',
+    version='0.1.2',
     description='Tools from the Wikimedia Foundation, such as a pageview API client',
     author='Dan Andreescu',
     author_email='dan.andreescu@gmail.com',
