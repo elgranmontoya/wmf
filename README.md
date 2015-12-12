@@ -17,3 +17,5 @@ p.article_views('en.wikipedia', ['Selfie', 'Cat', 'Dog'])
 p.project_views(['ro.wikipedia', 'de.wikipedia', 'commons.wikimedia'])
 p.top_articles('en.wikipedia', limit=10)
 ```
+
+When querying for multiple articles and multiple projects the client uses `ThreadPoolExecutor` to parallelize.  You can set the level of parallelism when you instantiate the client like `p = PageviewsClient(10)`.
