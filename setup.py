@@ -1,8 +1,8 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='wmf',
-    packages=['wmf'],
+    packages=find_packages(),
     version='0.1.1',
     description='Tools from the Wikimedia Foundation, such as a pageview API client',
     author='Dan Andreescu',
