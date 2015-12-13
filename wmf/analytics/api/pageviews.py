@@ -225,10 +225,10 @@ class PageviewsClient:
                 ...
             ]
         """
-        today = date.today()
-        year = str(year or today.year)
-        month = str(month or today.month).rjust(2, '0')
-        day = str(day or today.day).rjust(2, '0')
+        yesterday = date.today() - timedelta(days=1)
+        year = str(year or yesterday.year)
+        month = str(month or yesterday.month).rjust(2, '0')
+        day = str(day or yesterday.day).rjust(2, '0')
 
         url = '/'.join([endpoints['top'], project, access, year, month, day])
         result = requests.get(url).json()
